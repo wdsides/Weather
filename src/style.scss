@@ -1,0 +1,44 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ .wp-block-willsides-weather {
+	text-align: center;
+}
+
+.weather-block-condition {
+	padding: 0px 20px;
+	white-space: nowrap;
+}
+
+.weather-block-condition:first-of-type {
+	padding-left: 0px;
+}
+
+.weather-block-condition:last-of-type {
+	padding-right: 0px;
+}
+
+.weather-block-unit-label {
+	vertical-align: super;
+	font-size: 60%;
+}
+
+.weather-block-primary-icon {
+	font-size: 150%;
+	vertical-align: middle;
+	padding-right: 0.25rem;
+}
+
+.weather-block-divider {
+	font-size: 200%;
+	vertical-align: -10%;
+	font-weight: 100;
+}
+
+.wi-wind {
+	padding-left: 0.25rem;
+}

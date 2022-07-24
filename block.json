@@ -1,0 +1,45 @@
+{
+	"apiVersion": 2,
+	"name": "willsides/weather",
+	"version": "1.0.0",
+	"title": "Weather",
+	"category": "text",
+	"icon": "cloud",
+	"description": "Displays a set of weather conditions",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+        "dayconditions": {
+            "type": "string"
+        },
+        "hightemp": {
+            "type": "string"
+        },
+        "nightconditions": {
+            "type": "string"
+        },
+        "lowtemp": {
+            "type": "string"
+        },
+        "windspeed": {
+            "type": "string"
+        },
+        "winddir": {
+            "type": "string"
+        },
+        "humidity": {
+            "type": "string"
+        },
+        "raininches": {
+            "type": "string"
+        },
+        "snowinches": {
+            "type": "string"
+        }
+	},
+	"textdomain": "weather",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

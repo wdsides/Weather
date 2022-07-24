@@ -1,0 +1,105 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.weather-input-field-label {
+  clear: both !important;
+  min-width: 10rem;
+  float: left;
+  vertical-align: middle;
+}
+
+.weather-block-input-form input {
+  width: 4rem;
+}
+
+.weather-block-input-form input, .weather-block-input-form select {
+  min-height: 30px;
+  min-width: 4rem;
+  border-radius: 4px;
+  margin: 1px 1px;
+}
+
+.add-to-meta-buttons {
+  margin: 0.25rem 0 !important;
+  text-align: center;
+  clear: both !important;
+}
+
+.add-to-meta-instructions {
+  text-align: left;
+}
+
+.add-to-meta-section {
+  margin-top: 0.4rem;
+}
+
+.add-to-meta-buttons input {
+  margin: 0rem 0.5rem;
+  border-width: 1px;
+  width: 4rem;
+  cursor: pointer;
+}
+
+.meta-submitted-confirmation {
+  text-align: center !important;
+  background-color: rgba(1, 112, 16, 0.281);
+  cursor: default !important;
+  -webkit-animation: fadeInOut 3s linear forwards;
+          animation: fadeInOut 3s linear forwards;
+}
+
+@-webkit-keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.fade-back-in {
+  -webkit-animation: fadeIn 0.5s linear forwards;
+          animation: fadeIn 0.5s linear forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=index.css.map*/
