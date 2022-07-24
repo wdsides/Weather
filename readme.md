@@ -14,11 +14,18 @@ A wordpress plugin that will add a Gutenberg block to display a set of weather c
 == Installation ==
 
 1. Upload the following files and directories to the `/wp-content/plugins/weather` directory:
--assets/
--build/
--block.json
--weather.php
+	* assets/
+	* build/
+	* block.json
+	* weather.php
+
 2. Activate the plugin through the 'Plugins' screen in WordPress
+
+
+== Screenshots ==
+
+1. Example of some of the weather fields that can be entered
+
 
 == Changelog ==
 
