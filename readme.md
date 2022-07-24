@@ -1,8 +1,13 @@
 === Weather ===
+
 Contributors:      Will Sides
+
 Tags:              block
+
 Tested up to:      5.8.0
+
 Stable tag:        1.0.0
+
 License:           GPL-3.0-or-later
 
 Displays a set of weather conditions
