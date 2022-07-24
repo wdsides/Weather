@@ -34,23 +34,6 @@ function willsides_weather_block_init() {
 		filemtime( plugin_dir_path( __FILE__ ) . 'assets/weather-icons/css/weather-icons-wind.min.css' )
 	);
 
-	register_block_type( __DIR__ );
-
-	register_post_meta( 'post', 'header_meta_left', array(
-		'show_in_rest' => true,
-		'single' => true,
-		'type' => 'string',
-	) );
-	register_post_meta( 'post', 'header_meta_center', array(
-		'show_in_rest' => true,
-		'single' => true,
-		'type' => 'string',
-	) );
-	register_post_meta( 'post', 'header_meta_right', array(
-		'show_in_rest' => true,
-		'single' => true,
-		'type' => 'string',
-	) );
-	
+	register_block_type( __DIR__ );	
 }
 add_action( 'init', 'willsides_weather_block_init' );

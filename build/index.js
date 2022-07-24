@@ -192,12 +192,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./editor.scss */ "./src/editor.scss");
-/* harmony import */ var _wordpress_core_data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/core-data */ "@wordpress/core-data");
-/* harmony import */ var _wordpress_core_data__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_core_data__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_6__);
-
-
 
 
 
@@ -308,120 +302,6 @@ function Edit({
     }, "\"")) : null);
   }
 
-  function getStringContent() {
-    var s = '<div class="wp-block-willsides-weather">';
-
-    if (attributes.dayconditions || attributes.hightemp || attributes.nightconditions || attributes.lowtemp) {
-      s += `<span class="weather-block-condition">`;
-    }
-
-    if (attributes.dayconditions) {
-      s += `<i class="weather-block-primary-icon wi wi-${attributes.dayconditions}"></i>`;
-    }
-
-    if (attributes.hightemp) {
-      s += `<span>${attributes.hightemp}<i class="weather-block-temp-unit wi wi-fahrenheit"></i></span>`;
-    }
-
-    if ((attributes.hightemp || attributes.dayconditions) && (attributes.lowtemp || attributes.nightconditions)) {
-      s += `<span class="weather-block-divider">/</span>`;
-    }
-
-    if (attributes.nightconditions) {
-      s += `<i class="weather-block-primary-icon wi wi-${attributes.nightconditions}"></i>`;
-    }
-
-    if (attributes.lowtemp) {
-      s += `<span>${attributes.lowtemp}<i class="weather-block-temp-unit wi wi-fahrenheit"></i></span>`;
-    }
-
-    if (attributes.dayconditions || attributes.hightemp || attributes.nightconditions || attributes.lowtemp) {
-      s += `</span>`;
-    }
-
-    if (attributes.windspeed || attributes.winddir) {
-      s += `<span class="weather-block-condition"><i class="weather-block-primary-icon wi wi-strong-wind"></i>`;
-    }
-
-    if (attributes.windspeed) {
-      s += `<span class="weather-block-windspeed">${attributes.windspeed}<span class="weather-block-unit-label">mph</span></span>`;
-    }
-
-    if (attributes.winddir) {
-      s += `<span class="weather-block-winddir"><i class="weather-block-primary-icon wi wi-wind wi-${attributes.winddir}"></i></span>`;
-    }
-
-    if (attributes.windspeed || attributes.winddir) {
-      s += `</span>`;
-    }
-
-    if (attributes.humidity) {
-      s += `<span class="weather-block-condition"><i class="weather-block-primary-icon wi wi-humidity"></i>${attributes.humidity}<span class="weather-block-unit-label">%</span></span>`;
-    }
-
-    if (attributes.raininches) {
-      s += `<span class="weather-block-condition"><i class="weather-block-primary-icon wi wi-raindrop"></i>${attributes.raininches}<span class="weather-block-inches-label">"</span></span>`;
-    }
-
-    if (attributes.snowinches) {
-      s += `<span class="weather-block-condition"><i class="weather-block-primary-icon wi wi-snowflake-cold"></i>${attributes.snowinches}<span class="weather-block-inches-label">"</span></span>`;
-    }
-
-    s += `</div>`;
-    return s;
-  }
-
-  const postType = Object(_wordpress_data__WEBPACK_IMPORTED_MODULE_6__["useSelect"])(select => select('core/editor').getCurrentPostType(), []);
-  const [meta, setMeta] = Object(_wordpress_core_data__WEBPACK_IMPORTED_MODULE_5__["useEntityProp"])('postType', postType, 'meta');
-
-  function updateLeftHeaderMeta() {
-    setMeta({ ...meta,
-      header_meta_left: getStringContent()
-    });
-    const button = document.querySelector('.add-to-meta-buttons input[value="Left"]');
-    const tempText = document.createElement('input');
-    tempText.setAttribute("type", "button");
-    tempText.setAttribute("value", "done!");
-    tempText.classList.add('meta-submitted-confirmation');
-    button.parentNode.replaceChild(tempText, button);
-    button.classList.add("fade-back-in");
-    setTimeout(function () {
-      tempText.parentNode.replaceChild(button, tempText);
-    }, 3000);
-  }
-
-  function updateCenterHeaderMeta() {
-    setMeta({ ...meta,
-      header_meta_center: getStringContent()
-    });
-    const button = document.querySelector('.add-to-meta-buttons input[value="Center"]');
-    const tempText = document.createElement('input');
-    tempText.setAttribute("type", "button");
-    tempText.setAttribute("value", "done!");
-    tempText.classList.add('meta-submitted-confirmation');
-    button.parentNode.replaceChild(tempText, button);
-    button.classList.add("fade-back-in");
-    setTimeout(function () {
-      tempText.parentNode.replaceChild(button, tempText);
-    }, 3000);
-  }
-
-  function updateRightHeaderMeta() {
-    setMeta({ ...meta,
-      header_meta_right: getStringContent()
-    });
-    const button = document.querySelector('.add-to-meta-buttons input[value="Right"]');
-    const tempText = document.createElement('input');
-    tempText.setAttribute("type", "button");
-    tempText.setAttribute("value", "done!");
-    tempText.classList.add('meta-submitted-confirmation');
-    button.parentNode.replaceChild(tempText, button);
-    button.classList.add("fade-back-in");
-    setTimeout(function () {
-      tempText.parentNode.replaceChild(button, tempText);
-    }, 3000);
-  }
-
   return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", Object(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["useBlockProps"])(), (attributes.dayconditions || attributes.nightconditions || attributes.hightemp || attributes.lowtemp || attributes.windspeed || attributes.winddir || attributes.humidity || attributes.raininches || attributes.snowinches) && !isSelected ? getDOMContent() : Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["Placeholder"], {
     label: "Weather Block",
     instructions: "Enter at least one value"
@@ -495,7 +375,9 @@ function Edit({
     value: "night-alt-sleet"
   }, "sleet"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("option", {
     value: "night-alt-hail"
-  }, "hail")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("input", {
+  }, "hail"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("option", {
+    value: "night-fog"
+  }, "foggy")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("input", {
     name: "lowtemperature",
     type: "text",
     onChange: updateLowtemp,
@@ -593,25 +475,7 @@ function Edit({
     placeholder: "0.0"
   }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
     class: "weather-input-field-units"
-  }, "\""), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("br", null), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-    class: "add-to-meta-section"
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-    class: "add-to-meta-instructions"
-  }, "Insert into the post header metadata section:"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-    class: "add-to-meta-buttons"
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("input", {
-    type: "button",
-    value: "Left",
-    onClick: updateLeftHeaderMeta
-  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("input", {
-    type: "button",
-    value: "Center",
-    onClick: updateCenterHeaderMeta
-  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("input", {
-    type: "button",
-    value: "Right",
-    onClick: updateRightHeaderMeta
-  }))))));
+  }, "\""))));
 }
 
 /***/ }),
@@ -825,28 +689,6 @@ function save({
 /***/ (function(module, exports) {
 
 (function() { module.exports = window["wp"]["components"]; }());
-
-/***/ }),
-
-/***/ "@wordpress/core-data":
-/*!**********************************!*\
-  !*** external ["wp","coreData"] ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-(function() { module.exports = window["wp"]["coreData"]; }());
-
-/***/ }),
-
-/***/ "@wordpress/data":
-/*!******************************!*\
-  !*** external ["wp","data"] ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-(function() { module.exports = window["wp"]["data"]; }());
 
 /***/ }),
 
