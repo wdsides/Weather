@@ -24,6 +24,7 @@ A wordpress plugin that will add a Gutenberg block to display a set of weather c
 
 == Screenshots ==
 
+![Example 1](/assets/Screenshot-1.png?raw=true "Example 1")
 1. Example of some of the weather fields that can be entered
 
 
